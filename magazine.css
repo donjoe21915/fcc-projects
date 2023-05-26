@@ -3,11 +3,11 @@
 ::after {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
@@ -60,6 +60,8 @@ hr {
   text-align: justify;
 }
 
+/*There may be times where you are unsure of how many columns your grid will have, but you want an element to stop at the last column. To do this, you can use -1 for the end column.*/
+
 .hero {
   grid-column: 1 / -1;
   position: relative;
@@ -90,6 +92,8 @@ hr {
   color: rgba(255, 255, 255, 0.5);
 }
 
+/*The property grid-auto-flow takes either row or column as the first value, with an optional second value of dense. grid-auto-flow uses an auto-placement algorithm to adjust the grid layout. Setting it to column will tell the algorithm to create new columns for content as needed. The dense value allows the algorithm to backtrack and fill holes in the grid with smaller items, which can result in items appearing out of order.*/
+
 .social-icons {
   display: grid;
   font-size: 3rem;
@@ -98,7 +102,7 @@ hr {
   grid-auto-columns: 1fr;
   align-items: center;
 }
-
+/* The ::first-letter pseudo-selector allows you to target the first letter in the text content of an element*/
 .first-paragraph::first-letter {
   font-size: 6rem;
   color: orangered;
@@ -110,6 +114,7 @@ hr {
   color: #00beef;
   font-size: 2.4rem;
   text-align: center;
+  
   font-family: "Raleway", sans-serif;
 }
 
@@ -123,13 +128,18 @@ hr {
 
 .text-with-images {
   display: grid;
+  grid-template-rows: 1fr 2fr;
+  row-gap: 3rem;
+  margin-bottom: 3rem;
+  /* 
   grid-template-columns: 1fr 2fr;
   column-gap: 3rem;
   margin-bottom: 3rem;
+  */
 }
 
 .lists {
-  list-style-type: none;
+  list-style-type: circle;
   margin-top: 2rem;
 }
 
@@ -149,8 +159,8 @@ hr {
   place-items: center;
 }
 
-.image-1, .image-3 {
-  grid-column: 1 / -1;
+.image-1,  .image-3 {
+  grid-column: 1 / 4;
 }
 
 @media only screen and (max-width: 720px) {
@@ -185,9 +195,8 @@ hr {
     font-size: 1.6rem;
   } 
 }
-
 @media only screen and (max-width: 420px) {
   .hero-title {
-     font-size: 4.5rem;
+    font-size: 4.5rem;
   }
 }
