@@ -16,6 +16,7 @@
   </head>
   <body>
     <main>
+      <!-- Heading Section-->
       <section class="heading">
         <header class="hero">
           <img
@@ -24,6 +25,7 @@
             loading="lazy"
             class="hero-img"
           />
+          <!-- The loading attribute on an img element can be set to lazy to tell the browser not to fetch the image resource until it is needed (as in, when the user scrolls the image into view). As an additional benefit, lazy loaded elements will not load until the non-lazy elements are loaded - this means users with slow internet connections can view the content of your page without having to wait for the images to load.-->
           <h1 class="hero-title">OUR NEW CURRICULUM</h1>
           <p class="hero-subtitle">
             Our efforts to restructure our curriculum with a more project-based
@@ -33,6 +35,8 @@
         <div class="author">
           <p class="author-name">
             By
+            <!--The Referer HTTP header contains information about the address or URL of a page that a user might be visiting from. This information can be used in analytics to track how many users from your page visit freecodecamp.org, for example. Setting the rel attribute to noreferrer omits this information from the HTTP request. Give your a element a rel attribute set to noreferrer.-->
+            <!-- IMPORTANT : The noreferrer attribute masks your referral links in destination analytics. It protects your site's information from being transferred to the website your users are navigating to. As a result, this causes the links to appear as Direct traffic in Google Analytics, rather than Referral traffic from your specific domain. -->
             <a href="https://freecodecamp.org" target="_blank" rel="noreferrer"
               >freeCodeCamp</a
             >
@@ -57,6 +61,8 @@
           </a>
         </div>
       </section>
+      <!-- Heading Section-->
+      <!-- Text Section -->
       <section class="text">
         <p class="first-paragraph">
           Soon the freeCodeCamp curriculum will be 100% project-driven learning. Instead of a series of coding challenges, you'll learn through building projects - step by step. Before we get into the details, let me emphasize: we are not changing the certifications. All 6 certifications will still have the same 5 required projects. We are only changing the optional coding challenges.
@@ -86,6 +92,8 @@
           Instead of a series of coding challenges, people will be in their code editor passing one test after another, quickly building up a project. People will get into a real flow state, similar to what they experience when they build the required projects at the end of each certification. They'll get that sense of forward progress right from the beginning. And freeCodeCamp will be a much smoother experience.
         </p>
       </section>
+      <!-- Text Section -->
+      <!-- text-with-images section -->
       <section class="text text-with-images">
         <article class="brief-history">
           <h3 class="list-title">A Brief History</h3>
@@ -168,6 +176,7 @@
           />
         </aside>
       </section>
+       <!-- text-with-images section -->
     </main>
   </body>
 </html>
